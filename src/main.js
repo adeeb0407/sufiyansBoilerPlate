@@ -7,7 +7,7 @@ function Main() {
   return (
     <div className="App">
       <Home/>
-      <About/>
+      {/* <About/> */}
     </div>
   );
 }

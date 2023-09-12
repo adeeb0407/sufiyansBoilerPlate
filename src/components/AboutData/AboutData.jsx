@@ -1,12 +1,16 @@
 import React from 'react'
 import './aboutData.css'
 
-function AboutData() {
+function AboutData({incrementFunc}) {
   //javascript
   let data = 'AboutData'
   //HTML CSS
   return (
-    <div>{data}</div>
+    <div>
+
+      <button onClick={incrementFunc}>+</button>
+    </div>
+    
   )
 }
 

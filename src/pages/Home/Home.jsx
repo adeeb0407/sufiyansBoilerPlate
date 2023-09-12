@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import HomeTable from '../../components/HomeTable/HomeTable'
 import './home.css'
 import Axios from 'axios'
+import Form from '../../components/Form/Form'
 function Home() {
   const [products, setProducts] = useState([])
   
@@ -25,11 +26,13 @@ function Home() {
     }
   }
 
-  
+  const [showForm, setShowForm] = useState(false)
 
   return (
     <div>
-      <HomeTable products={products} />
+      {/* <HomeTable products={products} /> */}
+      <button onClick={() =>setShowForm(!showForm)}>NEW</button>
+      {showForm&&<Form />}
     </div>
   )
 }
